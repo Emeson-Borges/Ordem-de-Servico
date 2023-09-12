@@ -1,4 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/cliente_list.css' %}"
+>
+{% endblock css %}
 
 {% block content %}
   <h1>Lista de Clientes</h1>

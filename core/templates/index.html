@@ -1,4 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+  <link
+    rel="stylesheet"
+    href="{% static 'css/index.css' %}"
+  >
+{% endblock css %}
 
 {% block content %}
   <div class="jumbotron">
@@ -11,7 +19,7 @@
     <p>
       <a
         class="btn btn-primary btn-large"
-        href="#"
+        href="{% url 'crm:cliente_create' %}"
       >Criar Ordem de Serviço</a>
     </p>
   </div>

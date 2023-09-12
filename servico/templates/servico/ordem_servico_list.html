@@ -1,5 +1,13 @@
 <!-- ordem_servico_list.html -->
 {% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/ordem_servico_list.css' %}"
+>
+{% endblock css %}
 
 {% block content %}
   <h1>Ordens de Serviço</h1>
@@ -50,7 +58,7 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Num</th>
+            <th>Número</th>
             <th>Cliente</th>
             <th>Situação</th>
           </tr>

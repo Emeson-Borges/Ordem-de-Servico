@@ -19,7 +19,7 @@ def ordem_servico_list(request):
 def ordem_servico_create(request):
     template_name = 'servico/ordem_servico_form.html'
     context = {'form': OrdemServicoForm}
-    return render(request, template_name, context)
+    return render(request, template_name)
 
 
 def ordem_servico_detail(request, pk):
