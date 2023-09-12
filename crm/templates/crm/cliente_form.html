@@ -1,25 +1,25 @@
-{% extends "base.html" %}
 {% load widget_tweaks %}
 {% load static %}
 
 {% block css %}
 <link
   rel="stylesheet"
-  href="{% static 'css/cliente_form.css' %}"
+  href="{% static 'css/main.css' %}"
 >
 {% endblock css %}
 
 
 {% block content %}
   <div x-data>
-    <h1>Adicionar Cliente</h1>
 
     <div class="row">
       <div class="cols">
         <form
+          class="form"
           action="."
           method="POST"
         >
+        <h1>Adicionar Cliente</h1>
           {% csrf_token %}
 
           {% for field in form.visible_fields %}
@@ -34,12 +34,15 @@
               {% endif %}
             </div>
           {% endfor %}
+          
+          <div class="box">
 
           <button
             type="submit"
             class="btn btn-primary"
           >Salvar</button>
 
+          </div>
         </form>
       </div>
     </div>
